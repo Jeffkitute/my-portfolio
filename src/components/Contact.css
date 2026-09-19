@@ -1,0 +1,181 @@
+.contact-section {
+  padding: 110px 0;
+  background: #091525;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+
+  gap: 70px;
+
+  max-width: 950px;
+  margin: auto;
+}
+
+.contact-intro {
+  margin: 0 0 35px;
+
+  color: #91a5ba;
+
+  line-height: 1.8;
+  font-size: 0.95rem;
+}
+
+.contact-detail {
+  display: flex;
+  align-items: center;
+
+  gap: 15px;
+
+  margin-bottom: 25px;
+}
+
+.contact-icon {
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 8px;
+
+  background: rgba(56, 189, 248, 0.08);
+
+  color: #38bdf8;
+}
+
+.contact-detail span {
+  display: block;
+
+  color: #6f8499;
+
+  font-size: 0.72rem;
+  margin-bottom: 4px;
+}
+
+.contact-detail a,
+.contact-detail p {
+  margin: 0;
+
+  color: #dce6f0;
+
+  font-size: 0.85rem;
+}
+
+.contact-detail a:hover {
+  color: #38bdf8;
+}
+
+.contact-form {
+  padding: 30px;
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+
+  background: rgba(255, 255, 255, 0.025);
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+
+  margin-bottom: 8px;
+
+  color: #c9d6e4;
+
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+
+  padding: 13px 14px;
+
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 6px;
+
+  outline: none;
+
+  background: #07111f;
+  color: #ffffff;
+
+  font-size: 0.85rem;
+
+  transition: border-color 0.2s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #38bdf8;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: #50647a;
+}
+
+.form-group textarea {
+  min-height: 140px;
+
+  resize: vertical;
+}
+
+.send-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 9px;
+
+  width: 100%;
+
+  padding: 13px;
+
+  border: none;
+  border-radius: 6px;
+
+  background: #38bdf8;
+  color: #07111f;
+
+  font-size: 0.85rem;
+  font-weight: 800;
+
+  transition: all 0.25s ease;
+}
+
+.send-button:hover {
+  background: #7dd3fc;
+  transform: translateY(-2px);
+}
+
+.form-status {
+  margin: 15px 0 0;
+
+  text-align: center;
+
+  color: #7dd3fc;
+
+  font-size: 0.8rem;
+}
+
+@media (max-width: 800px) {
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+
+@media (max-width: 500px) {
+
+  .contact-form {
+    padding: 20px;
+  }
+}

@@ -1,0 +1,173 @@
+.projects-section {
+  padding: 110px 0;
+  background: #091525;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.project-card {
+  overflow: hidden;
+
+  background: #0d1a2b;
+
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 12px;
+
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(56, 189, 248, 0.4);
+}
+
+.project-image {
+  position: relative;
+  height: 210px;
+
+  overflow: hidden;
+
+  background: #111f31;
+}
+
+.project-image img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  transition: transform 0.4s ease;
+}
+
+.project-card:hover .project-image img {
+  transform: scale(1.05);
+}
+
+.project-overlay {
+  position: absolute;
+  inset: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(7, 17, 31, 0.75);
+
+  opacity: 0;
+
+  transition: opacity 0.3s ease;
+}
+
+.project-card:hover .project-overlay {
+  opacity: 1;
+}
+
+.project-overlay a {
+  width: 48px;
+  height: 48px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #38bdf8;
+  color: #07111f;
+
+  font-size: 1.3rem;
+}
+
+.project-content {
+  padding: 25px;
+}
+
+.project-content h3 {
+  margin: 0 0 12px;
+
+  color: #ffffff;
+  font-size: 1.25rem;
+}
+
+.project-content p {
+  min-height: 78px;
+
+  margin: 0;
+
+  color: #8fa3b8;
+
+  font-size: 0.88rem;
+  line-height: 1.7;
+}
+
+.project-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+
+  margin-top: 20px;
+}
+
+.project-tech span {
+  padding: 5px 9px;
+
+  border-radius: 4px;
+
+  background: rgba(56, 189, 248, 0.08);
+  color: #62c8f5;
+
+  font-size: 0.7rem;
+  font-weight: 600;
+}
+
+.project-links {
+  display: flex;
+  gap: 18px;
+
+  margin-top: 23px;
+
+  padding-top: 18px;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.project-links a {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+
+  color: #91a5ba;
+
+  font-size: 0.8rem;
+  font-weight: 600;
+
+  transition: color 0.2s ease;
+}
+
+.project-links a:hover {
+  color: #38bdf8;
+}
+
+@media (max-width: 900px) {
+
+  .projects-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-content p {
+    min-height: auto;
+  }
+}

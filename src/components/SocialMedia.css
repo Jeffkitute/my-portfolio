@@ -1,0 +1,47 @@
+.social-section {
+  padding: 55px 20px;
+
+  text-align: center;
+
+  background: #07111f;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.social-section p {
+  margin: 0 0 20px;
+
+  color: #667b90;
+
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+}
+
+.social-links a {
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+
+  color: #91a5ba;
+
+  transition: all 0.25s ease;
+}
+
+.social-links a:hover {
+  color: #38bdf8;
+  border-color: #38bdf8;
+  transform: translateY(-4px);
+}
