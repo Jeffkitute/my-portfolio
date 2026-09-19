@@ -1,3 +1,5 @@
+
+
 import React from 'react';
 
 import {
@@ -5,9 +7,9 @@ import {
   FaExternalLinkAlt
 } from 'react-icons/fa';
 
-import image1 from './images/Capture 4.png';
-import image2 from './images/Capture 5.png';
-import image3 from './images/github.png';
+import image1 from './images/github.png'; // School Management
+import image2 from './images/github.png';  // Kalitech
+import image3 from './images/github.png';  // Keja Zetu
 
 import './Projects.css';
 
@@ -15,33 +17,51 @@ const Projects = () => {
 
   const projects = [
     {
+      title: 'Keja Zetu',
+      description:
+        'A property rental marketplace that connects tenants with landlords and makes it easier to discover rental properties across Kenya.',
+      image: image3,
+      technologies: [
+        'Django',
+        'Python',
+        'JavaScript',
+        'PostgreSQL'
+      ],
+      github:
+        'https://github.com/Jeffkitute/react---django',
+      live:
+        'https://kejazetu.com'
+    },
+
+    {
+      title: 'Kalitech',
+      description:
+        'An e-commerce platform for selling phone accessories online, with product browsing, shopping, ordering and M-Pesa payment integration.',
+      image: image2,
+      technologies: [
+        'Django',
+        'Python',
+        'JavaScript',
+        'M-Pesa'
+      ],
+      github:
+        'https://github.com/Jeffkitute/kalitech',
+      live:
+        'https://kalitech.com'
+    },
+
+    {
       title: 'School Management System',
       description:
-        'A web-based school management system designed to streamline administrative and academic operations.',
+        'A web-based school management system designed to streamline administrative, student and academic operations.',
       image: image1,
-      technologies: ['Django', 'Python', 'JavaScript'],
+      technologies: [
+        'Django',
+        'Python',
+        'JavaScript'
+      ],
       github:
         'https://github.com/Jeffkitute/school-management-system'
-    },
-
-    {
-      title: 'Social Media Platform',
-      description:
-        'A social platform with authentication, content publishing, likes, comments, following and real-time features.',
-      image: image2,
-      technologies: ['Django', 'React', 'JavaScript'],
-      github:
-        'https://github.com/Jeffkitute/bloger'
-    },
-
-    {
-      title: 'Developer Project',
-      description:
-        'A full-stack web application demonstrating modern frontend and backend development techniques.',
-      image: image3,
-      technologies: ['React', 'Python', 'Django'],
-      github:
-        'https://github.com/Jeffkitute'
     }
   ];
 
@@ -72,6 +92,7 @@ const Projects = () => {
                 />
 
                 <div className="project-overlay">
+
                   <a
                     href={project.github}
                     target="_blank"
@@ -80,6 +101,18 @@ const Projects = () => {
                   >
                     <FaGithub />
                   </a>
+
+                  {project.live && (
+                    <a
+                      href={project.live}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={`Visit ${project.title}`}
+                    >
+                      <FaExternalLinkAlt />
+                    </a>
+                  )}
+
                 </div>
 
               </div>
@@ -113,14 +146,16 @@ const Projects = () => {
                     GitHub
                   </a>
 
-                  <a
-                    href={project.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <FaExternalLinkAlt />
-                    View
-                  </a>
+                  {project.live && (
+                    <a
+                      href={project.live}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <FaExternalLinkAlt />
+                      Live Site
+                    </a>
+                  )}
 
                 </div>
 
