@@ -22,13 +22,12 @@ const Contact = () => {
 
     setStatus('Sending...');
 
-    emailjs
-      .sendForm(
-        'service_wniokg8',
-        'template_y6s8jci',
+    emailjs.sendForm(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
         form.current,
         {
-          publicKey: 'CIcHy0GEiDMmClLiP',
+          publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
         }
       )
       .then(() => {
